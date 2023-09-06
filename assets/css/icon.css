@@ -1,0 +1,12 @@
+.icon {
+  --icon-size-base: 3rem;
+  --icon-size-xs: 1.5rem;
+  --icon-size-sm: 2.25rem;
+  --icon-size-lg: 4rem;
+  --icon-size-xl: 5rem;
+}
+
+.icon > svg {
+  height: 3rem;
+  width: 3rem;
+}
