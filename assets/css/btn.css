@@ -15,7 +15,7 @@ a:hover {
   --btn-padding-y: 0.875rem;
   --btn-font-family: inherit;
   --btn-font-size: 0.875rem;
-  --btn-font-weight: 600;
+  --btn-font-weight: 500;
   --btn-linhe-height: 1.6;
   --btn-color: #161c2d;
   --btn-bg: transparent;
@@ -59,14 +59,14 @@ a:hover {
 }
 
 .btn-primary {
-  --btn-color: #fff;
-  --btn-bg: #335eea;
-  --btn-border-color: #335eea;
-  --btn-hover-color: #fff;
-  --btn-hover-bg: #2b50c7;
-  --btn-hover-border-color: #294bbb;
+  --btn-color: var(--color-white-20);
+  --btn-bg: var(--color-sky-70);
+  --btn-border-color: var(--color-sky-0);
+  --btn-hover-color: var(--color-white-20);
+  --btn-hover-bg: var(--color-sky-80);
+  --btn-hover-border-color: var(--color-sky-80);
   --btn-focus-shadow-rgb: 82, 118, 237;
-  --btn-active-color: #fff;
+  --btn-active-color: var(--color-white-20);
   --btn-active-bg: #294bbb;
   --btn-active-border-color: #2647b0;
   --btn-active-shadow: 0 0;
@@ -443,23 +443,44 @@ a:hover {
   border-color: transparent !important;
 }
 
+.text-link {
+  --text-link-padding-x: ;
+  --text-link-padding-y: ;
+  --text-link-font-weigth: 400;
+  --text-link-color: var(--link-color);
+  --text-link-hover-color: var(--link-hover-color);
+  --text-link-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  list-style: none;
+  color: var(--text-link-color);
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+}
+
+.text-link:hover {
+  color: var(--text-link-hover-color);
+  text-decoration: var(--text-link-decoration);
+}
+
 .nav-link {
   --nav-link-padding-x: 0;
   --nav-link-padding-y: 0.5rem;
-  --nav-link-font-weight: ;
-  --nav-link-color: var(--color-gray);
-  --nav-link-hover-color: var(--color-primary);
-  --nav-link-disabled-color: var(--navbar-disabled-color);
+  --nav-link-font-size: 1.125rem;
+  --nav-link-font-weight: 500;
+  --nav-link-color: var(--link-color);
+  --nav-link-hover-color: var(--link-hover-color);
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   list-style: none;
-  margin-bottom: 0;
-  padding-left: 0;
-  color: var(--nav-link-color);
+  padding: var(--nav-link-padding-y) var(--nav-link-padding-x);
   font-size: var(--nav-link-font-size);
   font-weight: var(--nav-link-font-weight);
-  padding: var(--nav-link-padding-y) var(--nav-link-padding-x);
+  color: var(--nav-link-color);
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out;
 }
@@ -467,6 +488,20 @@ a:hover {
 .nav-link:hover {
   color: var(--nav-link-hover-color);
   text-decoration: none;
+}
+
+.nav-link::before {
+  position: absolute;
+  bottom: 0.25rem;
+  content: "";
+  width: 0;
+  height: 1.5px;
+  background-color: var(--nav-link-hover-color);
+  transition: width 0.15s ease-in-out;
+}
+
+.nav-link:hover::before {
+  width: 100%;
 }
 
 @media (prefers-reduced-motion: reduce) {
