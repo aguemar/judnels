@@ -4,10 +4,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Roboto+Slab:wght@700&display=swap");
 
 :root {
-  --color-primary: #335eea;
-  --color-ligh-primary: #5d80f5;
-  --color-dark-primary: #2b50c7;
-  --color-dark-very-primary: #294bbb;
+  --color-primary: #0d354f;
+  --color-ligh-primary: #1f5a81;
+  --color-dark-primary: #08293f;
+  --color-dark-very-primary: #061d2c;
+  --color-secondary: #e31b28;
+
   --color-white: #fff;
 
   --color-light-gray: #b3bac5;
@@ -31,7 +33,7 @@
   --link-hover-color: ;
 
   --font-size-h1: 2.375rem;
-  --font-line-height-h1: 1.2;
+  --line-height-heading: 1.2;
   --font-size-h2: 2rem;
   --font-size-h3: 1.375rem;
   --font-size-h4: 1.25rem;
@@ -52,11 +54,16 @@ body {
   line-height: var(--body-line-height);
 }
 
-h1 {
-  display: block;
-  font-size: var(--font-size-h1);
-  line-height: var(--font-line-height-h1);
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--body-font-family-slab);
+  line-height: var(--line-height-heading);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
 }
 
 h2 {
@@ -201,6 +208,12 @@ img {
   justify-content: space-between;
 }
 
+.topbar-contact,
+.topbar-social {
+  display: flex;
+  gap: 1rem;
+}
+
 /* header */
 .header {
   position: relative;
@@ -247,6 +260,37 @@ img {
 .hero-buttons a {
   width: 100%;
   margin-bottom: 0.5rem;
+}
+
+/* banner */
+.banner {
+  padding-block: 2.5rem;
+  border-width: 1px 0 1px 0;
+  border-style: solid;
+  border-color: var(--color-primary);
+}
+
+.banner-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.banner-item {
+  display: flex;
+  align-items: center;
+
+  gap: 2rem;
+}
+
+.banner-item span {
+  text-align: left;
+}
+
+.banner-item svg {
+  width: 50px;
+  height: 50px;
+  fill: var(--color-primary);
 }
 
 /* blog */
