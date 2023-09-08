@@ -41,14 +41,17 @@
   --heading-size-3: 1.875rem;
   --heading-size-4: 1.625rem;
   --heading-weight: 700;
-  --heading-line-hegiht: 1.2;
+  --heading-line-hegiht: 1;
   --link-color: var(--color-sky-70);
   --link-hover-color: var(--color-sky-80);
-
   --border-radius: 0.25rem;
   --border-radius-sm: 0.2rem;
   --border-radius-lg: 0.3rem;
   --border-radius-2xl: 50rem;
+}
+
+* {
+  outline: 1px solid red;
 }
 
 * {
@@ -93,12 +96,6 @@ h3 {
 p {
   margin-bottom: 1rem;
   margin-top: 0;
-}
-
-a:not([href]):not([class]),
-a:not([href]):not([class]):hover {
-  color: inherit;
-  text-decoration: none;
 }
 
 img,
@@ -173,9 +170,8 @@ button:focus:not(:focus-visible) {
 
 /* topbar */
 .topbar {
-  height: 50px;
+  background-color: var(--color-sky-80);
   padding: 0.5rem 0;
-  border-bottom: 1px solid var(--color-gray-20);
 }
 .topbar-wrapper {
   display: flex;
@@ -188,7 +184,7 @@ button:focus:not(:focus-visible) {
 }
 
 .topbar-wrapper i {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .topbar-contact,
@@ -200,7 +196,7 @@ button:focus:not(:focus-visible) {
 
 /* header */
 .header {
-  margin: 0.5rem 0 1rem;
+  margin: 1rem 0;
   position: relative;
 }
 .nav {
@@ -215,7 +211,7 @@ button:focus:not(:focus-visible) {
 
 /* hero */
 .hero-wrapper {
-  margin: 2rem 0;
+  margin: 2rem 0 0;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -392,9 +388,7 @@ button:focus:not(:focus-visible) {
 }
 
 /* footer */
-.footer * {
-  /* outline: 1px solid red; */
-}
+
 .footer {
   padding: 2rem 0;
   text-align: center;
@@ -461,17 +455,10 @@ button:focus:not(:focus-visible) {
   .nav-close {
     width: 2rem;
     height: 2rem;
-    padding: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.75rem;
-    color: var(--color-sky-70);
-  }
-
-  .nav-open:hover,
-  .nav-close:hover {
-    color: var(--color-sky-80);
   }
 
   .nav-close {
@@ -522,17 +509,18 @@ button:focus:not(:focus-visible) {
 
 @media screen and (min-width: 768px) {
   .hero-wrapper {
-    padding: 4rem 0;
-    text-align: left !important;
+    padding: 3rem 0;
     justify-content: space-between;
+    gap: 1rem;
+    text-align: left;
   }
 
   .hero-content {
-    width: calc(50% - 1rem);
+    width: calc(45% - 0.5rem);
   }
 
   .hero-image {
-    width: calc(50% - 1rem);
+    width: calc(55% - 1rem);
     order: 2;
   }
 
