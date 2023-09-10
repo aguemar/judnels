@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const navOpen = document.getElementById("nav-open");
-  const navClose = document.getElementById("nav-close");
-  const navMenu = document.getElementById("nav-menu");
+  const navOpen = document.getElementById("header-open");
+  const navClose = document.getElementById("header-close");
+  const navMenu = document.getElementById("header-nav-menu");
 
   function toggleMenu() {
     navMenu.classList.toggle("active");
