@@ -2,10 +2,6 @@
 }
 
 @media screen and (min-width: 576px) {
-  .banner-item {
-    width: calc(50% - 2rem);
-  }
-
   .cards-wrap-4 .card {
     width: calc(50% - 2rem);
   }
@@ -39,14 +35,6 @@
 @media screen and (min-width: 992px) {
   .lg-text-align-left {
     text-align: left;
-  }
-
-  .banner-wrapper {
-    justify-content: space-between;
-  }
-
-  .banner-item {
-    width: calc(25% - 2rem);
   }
 
   .cards-wrap-3 .card {
